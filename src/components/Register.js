@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 import { registerUser } from '../api/auth';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 function Register() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const [user, setUser] = React.useState({
     username: '',
     email: '',
     password: '',
     passwordConfirmation: ''
-  })
+  });
 
   function handleChange(event) {
     setUser({ ...user, [event.target.name]: event.target.value });
@@ -22,7 +22,7 @@ function Register() {
     const getData = async () => {
       try {
         await registerUser(user);
-        navigate('/login')
+        navigate('/login');
       } catch (err) {
         console.error(err);
       }
@@ -97,7 +97,7 @@ function Register() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Register
+export default Register;

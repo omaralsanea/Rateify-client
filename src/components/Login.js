@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react';
 import { loginUser } from '../lib/api';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const [user, setUser] = React.useState({
     email: '',
     password: ''
-  })
+  });
 
   function handleChange(event) {
     setUser({ ...user, [event.target.name]: event.target.value });
@@ -20,8 +20,8 @@ function Login() {
     const getData = async () => {
       try {
         const { data } = await loginUser(user);
-        localStorage.setItem('accessToken', data.token)
-        navigate('/')
+        localStorage.setItem('accessToken', data.token);
+        navigate('/');
       } catch (err) {
         console.error(err);
       }
@@ -34,7 +34,7 @@ function Login() {
       <div className="container">
         <div className="columns">
           <form
-            className="box column is-half is-offset-one-quarter"
+            className="column is-half is-offset-one-quarter box"
             onSubmit={handleSubmit}
           >
             <div className="field">
@@ -71,7 +71,7 @@ function Login() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Login
+export default Login;
