@@ -9,7 +9,7 @@ export const getAllArtists = async () => {
   };
 
   const { data } = await axios.request(options);
-
+  console.log('GETALLARTIST DATA IS', data);
   return data;
 };
 
