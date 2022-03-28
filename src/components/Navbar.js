@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar px-6">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">
           Home
@@ -37,24 +37,40 @@ const Navbar = () => {
         <Link to="/releases" className="navbar-item">
           Releases
         </Link>
-        {/* // ! If the user is an admin, we show the /create page */}
+        {/* // ! If the user is an admin, we show the /create page
         {isAdminState && (
           <Link to="/create" className="navbar-item">
             Create
           </Link>
-        )}
-        <Link to="/login" className="navbar-item">
-          Login
-        </Link>
-        {/* // ! If logged in, can show the option to log out. */}
+        )} */}
         {getLoggedInUserId() && (
-          <div className="navbar-item" onClick={logout}>
-            Logout
-          </div>
+          <>
+            <Link to="/addartist" className="navbar-item">
+              Add Artist
+            </Link>
+            <Link to="/addrelease" className="navbar-item">
+              Add Release
+            </Link>
+          </>
         )}
-        <Link to="/register" className="navbar-item">
-          Register
-        </Link>
+      </div>
+      <div className="navbar-menu">
+        <div className="navbar-end">
+          <Link to="/login" className="navbar-item">
+            Login
+          </Link>
+          {/* // ! If logged in, can show the option to log out. */}
+          {getLoggedInUserId() && (
+            <Link to="#" className="navbar-item" onClick={logout}>
+              Logout
+            </Link>
+          )}
+          {!getLoggedInUserId() && (
+            <Link to="/register" className="navbar-item">
+              Register
+            </Link>
+          )}
+        </div>
       </div>
     </nav>
   );

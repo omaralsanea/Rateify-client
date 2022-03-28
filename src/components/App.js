@@ -10,6 +10,7 @@ import Register from './Register';
 import ArtistIndex from './artist/ArtistIndex';
 import AddArtist from './artist/AddArtist';
 import ReleaseIndex from './release/ReleaseIndex';
+import AddRelease from './release/AddRelease';
 
 import '../styles/style.scss';
 
@@ -25,6 +26,7 @@ const App = () => (
       <Route path="/artists" element={<ArtistIndex />} />
       <Route path="/addartist" element={<AddArtist />} />
       <Route path="/releases" element={<ReleaseIndex />} />
+      <Route path="/addrelease" element={<AddRelease />} />
     </Routes>
   </BrowserRouter>
 );
