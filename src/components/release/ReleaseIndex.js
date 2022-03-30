@@ -18,7 +18,7 @@ const ReleaseIndex = () => {
   }, []);
 
   return (
-    <section className="section">
+    <section className="section has-background-dark">
       <div className="container">
         <div className="columns is-multiline">
           {!releases ? (

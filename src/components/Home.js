@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReleaseCard from './release/ReleaseCard';
-import Carousel from './Carousel';
-
+import CarouselLatest from './CarouselLatest';
+import CarouselGreatest from './CarouselGreatest';
 import { getAllReleases } from '../api/release';
 
 const Home = () => {
@@ -22,37 +22,25 @@ const Home = () => {
 
   return (
     <>
-      <h1 className='title is-3 has-text-centered'>
-        Welcome to the Music Rating App!
-      </h1>
+      <section className="hero is-fullheight-with-navbar has-background-dark">
+        <h1 className="title has-text-centered has-text-white mt-4">
+          Welcome to the Music Rating App!
+        </h1>
 
-      {releases && <Carousel releases={releases} />}
-      {/* <h2 className='title is-4 has-text-centered'>Latest Releases</h2>
-      <section className='section'>
-        <div className='container'>
-          <div className='columns is-flex-direction-row'>
-            {!releases ? (
-              <p>Loading Releases...</p>
-            ) : (
-              releases.map((release) => (
-                <ReleaseCard key={release._id} {...release} />
-              ))
-            )}
-          </div>
+        <div className="container">
+          <h2 className="has-text-centered has-text-white my-4">
+            {' '}
+            Recently Added Releases{' '}
+          </h2>
+          {releases && <CarouselLatest releases={releases} />}
         </div>
-      </section> */}
-      <h2 className='title is-4 has-text-centered'>Highest Rated Releases</h2>
-      <section className='section'>
-        <div className='container'>
-          <div className='columns is-flex-direction-row'>
-            {!releases ? (
-              <p>Loading Releases...</p>
-            ) : (
-              releases.map((release) => (
-                <ReleaseCard key={release._id} {...release} />
-              ))
-            )}
-          </div>
+
+        <div className="container">
+          <h2 className="has-text-centered has-text-white my-4">
+            {' '}
+            Highest Rated Releases{' '}
+          </h2>
+          {releases && <CarouselGreatest releases={releases} />}
         </div>
       </section>
     </>

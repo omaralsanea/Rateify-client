@@ -26,15 +26,15 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='navbar px-6 title is-5'>
-      <div className='navbar-brand'>
-        <Link to='/' className='navbar-item'>
+    <nav className="navbar px-6 title is-5 has-background-black mb-0">
+      <div className="navbar-brand">
+        <Link to="/" className="navbar-item has-text-white">
           Home
         </Link>
-        <Link to='/artists' className='navbar-item'>
+        <Link to="/artists" className="navbar-item has-text-white">
           Artists
         </Link>
-        <Link to='/releases' className='navbar-item'>
+        <Link to="/releases" className="navbar-item has-text-white">
           Releases
         </Link>
         {/* // ! If the user is an admin, we show the /create page
@@ -45,31 +45,35 @@ const Navbar = () => {
         )} */}
         {getLoggedInUserId() && (
           <>
-            <Link to='/addartist' className='navbar-item'>
+            <Link to="/addartist" className="navbar-item has-text-white">
               Add Artist
             </Link>
-            <Link to='/addrelease' className='navbar-item'>
+            <Link to="/addrelease" className="navbar-item has-text-white">
               Add Release
             </Link>
           </>
         )}
       </div>
-      <div className='navbar-menu'>
-        <div className='navbar-end'>
-          <Link to='/about' className='navbar-item'>
+      <div className="navbar-menu">
+        <div className="navbar-end">
+          <Link to="/about" className="navbar-item has-text-white">
             About
           </Link>
-          <Link to='/login' className='navbar-item'>
+          <Link to="/login" className="navbar-item has-text-white">
             Login
           </Link>
           {/* // ! If logged in, can show the option to log out. */}
           {getLoggedInUserId() && (
-            <Link to='#' className='navbar-item' onClick={logout}>
+            <Link
+              to="#"
+              className="navbar-item has-text-white"
+              onClick={logout}
+            >
               Logout
             </Link>
           )}
           {!getLoggedInUserId() && (
-            <Link to='/register' className='navbar-item'>
+            <Link to="/register" className="navbar-item has-text-white">
               Register
             </Link>
           )}

@@ -22,40 +22,44 @@ const Login = () => {
   };
 
   return (
-    <section className="section">
-      <div className="container">
-        <div className="columns">
+    <section className="is-fullheight-with-navbar has-background-dark form-page">
+      <div className="container pt-6">
+        <div className="columns pt-6">
           <form
-            className="column is-half is-offset-one-quarter box"
+            className="column is-half is-offset-one-quarter box has-background-grey"
             onSubmit={handleSubmit}
           >
             <div className="field">
-              <label htmlFor="email" className="label">
+              <label
+                htmlFor="email"
+                className="label has-text-white has-text-centered"
+              >
                 Email
               </label>
               <div className="control">
                 <input
                   type="text"
-                  className="input"
+                  className="input has-background-grey-lighter"
                   id="email"
                   value={emailValue}
                   onChange={handleEmailChange}
-                  placeHolder="Email"
                 />
               </div>
             </div>
             <div className="field">
-              <label htmlFor="password" className="label">
+              <label
+                htmlFor="password"
+                className="label has-text-white has-text-centered"
+              >
                 Password
               </label>
               <div className="control">
                 <input
                   type="password"
-                  className="input"
+                  className="input has-background-grey-lighter"
                   id="password"
                   value={passwordValue}
                   onChange={handlePasswordChange}
-                  placeHolder="Password"
                 />
               </div>
             </div>
@@ -63,7 +67,7 @@ const Login = () => {
             <button
               type="submit"
               value="Login"
-              className="button is-fullwidth is-warning"
+              className="label button is-fullwidth is-success"
             >
               Log me in!
             </button>

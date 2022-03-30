@@ -51,10 +51,11 @@
   left: 0;
 
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
 
-  padding-top: 30px;
+  padding-top: 0px;
 }
 .slick-track:before,
 .slick-track:after {

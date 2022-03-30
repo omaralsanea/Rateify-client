@@ -31,19 +31,20 @@ function Register() {
   }
 
   return (
-    <section className="section">
-      <div className="container">
-        <div className="columns">
+    <section className="is-fullheight-with-navbar has-background-dark form-page">
+      <div className="container pt-6">
+        <div className="columns pt-6">
           <form
-            className="column is-half is-offset-one-quarter box"
+            className="column is-half is-offset-one-quarter box has-background-grey"
             onSubmit={handleSubmit}
           >
             <div className="field">
-              <label className="label">Username</label>
+              <label className="label has-text-white has-text-centered">
+                Username
+              </label>
               <div className="control">
                 <input
-                  className="input"
-                  placeholder="Username"
+                  className="input has-background-grey-lighter"
                   name="username"
                   onChange={handleChange}
                   value={user.username}
@@ -51,11 +52,12 @@ function Register() {
               </div>
             </div>
             <div className="field">
-              <label className="label">Email</label>
+              <label className="label has-text-white has-text-centered">
+                Email
+              </label>
               <div className="control">
                 <input
-                  className="input"
-                  placeholder="Email"
+                  className="input has-background-grey-lighter"
                   name="email"
                   onChange={handleChange}
                   value={user.email}
@@ -63,12 +65,13 @@ function Register() {
               </div>
             </div>
             <div className="field">
-              <label className="label">Password</label>
+              <label className="label has-text-white has-text-centered">
+                Password
+              </label>
               <div className="control">
                 <input
                   type="password"
-                  className="input"
-                  placeholder="Password"
+                  className="input has-background-grey-lighter"
                   name="password"
                   onChange={handleChange}
                   value={user.password}
@@ -76,12 +79,13 @@ function Register() {
               </div>
             </div>
             <div className="field">
-              <label className="label">Password Confirmation</label>
+              <label className="label has-text-white has-text-centered">
+                Password Confirmation
+              </label>
               <div className="control">
                 <input
                   type="password"
-                  className="input"
-                  placeholder="Password Confirmation"
+                  className="input has-background-grey-lighter"
                   name="passwordConfirmation"
                   onChange={handleChange}
                   value={user.passwordConfirmation}
@@ -89,7 +93,10 @@ function Register() {
               </div>
             </div>
             <div className="field">
-              <button type="submit" className="button is-fullwidth is-warning">
+              <button
+                type="submit"
+                className="button label is-fullwidth is-success"
+              >
                 Register Me!
               </button>
             </div>

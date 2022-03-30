@@ -1,3 +1,33 @@
 @import '~bulma/bulma.sass';
 @import url(./partials/_slick-theme.css);
 @import url(./partials/_slick.css);
+
+.slider-element {
+  display: flex;
+  justify-content: center;
+}
+
+.slider-element img {
+  justify-self: center;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
+.artist-img img {
+  object-fit: cover;
+  box-shadow: 0 0 8px 5px #888888;
+}
+button.slick-arrow {
+  fill: white;
+}
+
+.release-art img {
+  border-radius: 10px;
+}
+
+.form-page,
+.show-page {
+  height: 100vh;
+}

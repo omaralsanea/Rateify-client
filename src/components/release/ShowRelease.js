@@ -24,7 +24,7 @@ const ReleaseShow = () => {
   }, [id]);
 
   return (
-    <section className="section">
+    <section className="section has-background-dark show-page">
       <div className="container">
         {!release ? (
           <p>Loading...</p>
@@ -32,19 +32,23 @@ const ReleaseShow = () => {
           <div>
             <div className="columns">
               <div className="column is-half">
-                <figure className="image">
+                <figure className="image release-art">
                   <img src={release.artwork} alt={release.title} />
                 </figure>
               </div>
               <div className="column is-half">
-                <h2 className="title has-text-centered">{release.title}</h2>
-                <h2 className="title has-text-centered">
+                <h4 className="title has-text-centered has-text-white">
+                  {release.title}
+                </h4>
+                <h3 className="title has-text-centered has-text-white is-size-4">
                   <Link to={`/artists/${release.artist._id}`}>
                     {release.artist.name}
                   </Link>
+                </h3>
+                <h2 className="title has-text-centered has-text-white is-size-5">
+                  {release.genres}
                 </h2>
-                <h2 className="title has-text-centered">{release.genres}</h2>
-                <h2 className="title has-text-centered">
+                <h2 className="title has-text-centered has-text-white is-size-5">
                   {release.releaseYear}
                 </h2>
                 <div className="has-text-centered">

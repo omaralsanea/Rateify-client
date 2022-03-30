@@ -1,15 +1,17 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { Link } from 'react-router-dom';
 
-function Carousel({ releases }) {
+function CarouselGreatest({ releases }) {
   const settings = {
     centerMode: true,
     focusOnSelect: true,
     centerPadding: '0%',
-    slidesToShow: 3,
-    dots: false,
+    slidesToShow: 5,
+    dots: true,
     autoplay: false,
     draggable: true,
+    arrows: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -18,8 +20,8 @@ function Carousel({ releases }) {
           centerPadding: '25%',
           slidesToScroll: 1,
 
-          dots: true,
-          arrows: false
+          dots: true
+          // arrows: false
         }
       },
       {
@@ -28,8 +30,8 @@ function Carousel({ releases }) {
           slidesToShow: 1,
           centerPadding: '20%',
           slidesToScroll: 1,
-          dots: true,
-          arrows: false
+          dots: true
+          // arrows: false
         }
       },
       {
@@ -38,8 +40,8 @@ function Carousel({ releases }) {
           slidesToShow: 1,
           centerPadding: '12%',
           slidesToScroll: 1,
-          dots: true,
-          arrows: false
+          dots: true
+          // arrows: false
         }
       }
     ]
@@ -51,11 +53,13 @@ function Carousel({ releases }) {
   return (
     <Slider {...settings}>
       {releases.map((release) => (
-        <div key={release._id}>
-          <img src={release.artwork} alt={release.title} />
+        <div key={release.title} className="slider-element">
+          <Link to={`/releases/${release._id}`}>
+            <img src={release.artwork} alt={release.title} />
+          </Link>
         </div>
       ))}
     </Slider>
   );
 }
-export default Carousel;
+export default CarouselGreatest;

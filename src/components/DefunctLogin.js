@@ -30,7 +30,7 @@ function Login() {
   }
 
   return (
-    <section className="section">
+    <section className="is-fullheight-with-navbar has-background-dark form-page">
       <div className="container">
         <div className="columns">
           <form
@@ -42,7 +42,6 @@ function Login() {
               <div className="control">
                 <input
                   className="input"
-                  placeholder="Email"
                   name="email"
                   onChange={handleChange}
                   value={user.email}
@@ -54,8 +53,7 @@ function Login() {
               <div className="control">
                 <input
                   type="password"
-                  className="input"
-                  placeholder="Password"
+                  className="input has-text-white has-text-centered"
                   name="password"
                   onChange={handleChange}
                   value={user.password}
@@ -63,7 +61,7 @@ function Login() {
               </div>
             </div>
             <div className="field">
-              <button type="submit" className="button is-fullwidth is-warning">
+              <button type="submit" className="button is-fullwidth is-success">
                 Log Me In!
               </button>
             </div>

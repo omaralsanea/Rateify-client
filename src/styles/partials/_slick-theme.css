@@ -6,13 +6,15 @@
 } */
 
 /* Icons */
-/* @font-face
-{
-    font-family: 'slick';
-    font-weight: normal;
-    font-style: normal;
-    src: url('./fonts/slick.eot');
-    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+/* @font-face {
+  font-family: 'slick';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./fonts/slick.eot');
+  src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/slick.woff') format('woff'),
+    url('./fonts/slick.ttf') format('truetype'),
+    url('./fonts/slick.svg#slick') format('svg');
 } */
 /* Arrows */
 .slick-prev,
@@ -35,9 +37,9 @@
   cursor: pointer;
 
   color: black !important;
-  border: 1px solid black;
+  border: none;
   outline: none;
-  background: white;
+  background: none;
 }
 .slick-prev:hover,
 .slick-prev:focus,
@@ -58,31 +60,38 @@
   opacity: 0.25;
 }
 
-.slick-prev:before,
+/* .slick-prev:before,
 .slick-next:before {
   font-family: 'slick';
   font-size: 20px;
   line-height: 1;
 
   opacity: 0.75;
-  color: white;
+  color: grey;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 .slick-prev {
-  left: -25px;
+  left: -45px;
 }
 [dir='rtl'] .slick-prev {
-  right: -25px;
+  right: -45px;
   left: auto;
 }
 .slick-prev:before {
-  content: '←';
+  content: url(../assets/angle-left-white.svg);
 }
 [dir='rtl'] .slick-prev:before {
-  content: '→';
+  content: url(../assets/angle-left-white.svg);
+}
+
+.slick-prev-black:before {
+  content: url(../assets/angle-left-black.svg);
+}
+[dir='rtl'] .slick-prev-black:before {
+  content: url(../assets/angle-left-black.svg);
 }
 
 .slick-next {
@@ -93,10 +102,17 @@
   left: -25px;
 }
 .slick-next:before {
-  content: '→';
+  content: url(../assets/angle-right-white.svg);
 }
 [dir='rtl'] .slick-next:before {
-  content: '←';
+  content: url(../assets/angle-right-white.svg);
+}
+
+.slick-next.slick-prev-black:before {
+  content: url(../assets/angle-right-black.svg);
+}
+[dir='rtl'] .slick-next.slick-prev-black:before {
+  content: url(../assets/angle-right-black.svg);
 }
 
 /* Dots */

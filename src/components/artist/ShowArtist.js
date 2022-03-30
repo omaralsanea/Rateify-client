@@ -20,21 +20,22 @@ const ShowArtist = () => {
   }, [id]);
 
   return (
-    <section className="section">
+    <section className="section has-background-dark">
       <div className="container">
         {!artist ? (
           <p>Loading...</p>
         ) : (
           <div>
-            <h2 className="title has-text-centered">{artist.name}</h2>
-            <hr />
+            <h2 className="title has-text-centered has-text-white">
+              {artist.name}
+            </h2>
             <div className="columns">
               <div className="column is-half">
                 <figure className="image">
                   <img src={artist.img} alt={artist.name} />
                 </figure>
               </div>
-              <div className="column is-half">
+              <div className="column is-half has-text-white">
                 <h3>Biography</h3>
                 <p>{artist.bio}</p>
                 <h2>Releases</h2>
