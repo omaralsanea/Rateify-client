@@ -1,18 +1,63 @@
-import React from 'react';
+import React, { Component, useEffect } from 'react';
 import { createRelease } from '../../api/release';
 import { useNavigate } from 'react-router-dom';
+import Select from 'react-select';
+import { getAllArtists } from '../../api/artist';
 
 const AddRelease = () => {
+  const genreOptions = [
+    { value: 'rock', label: 'Rock' },
+    { value: 'pop', label: 'Pop' },
+    { value: 'jazz', label: 'Jazz' },
+    { value: 'classical', label: 'Classical' },
+    { value: 'metal', label: 'Metal' },
+    { value: 'country', label: 'Country' },
+    { value: 'folk', label: 'Folk' },
+    { value: 'blues', label: 'Blues' },
+    { value: 'r&b', label: 'R&B' },
+    { value: 'jungle', label: 'Jungle' },
+    { value: 'reggae', label: 'Reggae' },
+    { value: 'afrobeat', label: 'Afrobeat' },
+    { value: 'electronic', label: 'Electronic' },
+    { value: 'hip-hop', label: 'Hip Hop' },
+    { value: 'hard-rock', label: 'Hard Rock' },
+    { value: 'latin', label: 'Latin' },
+    { value: 'world', label: 'World' },
+    { value: 'spoken-word', label: 'Spoken Word' },
+    { value: 'progressive-rock', label: 'Progressive Rock' },
+    { value: 'house-techno', label: 'House/Techno' }
+  ];
+  const [selectedGenres, setGenres] = React.useState([]);
   const navigate = useNavigate();
-
   const [newRelease, setNewRelease] = React.useState({
     title: '',
     artwork: '',
-    genres: [],
+    genres: selectedGenres.map((x) => x.value),
     releaseYear: '',
     url: '',
     artist: ''
   });
+
+  useEffect(() => {
+    setNewRelease();
+  }, []);
+
+  // const [artistSearch, setSearchValue] = React.useState('');
+
+  // const filterArtists = (artistSearch) => {
+  //   return getAllArtists.filter((i) => {
+  //     i.label.toLowerCase().includes(artistSearch.toLowerCase);
+  //   });
+  // };
+  // function handleArtistChange(event) {
+  //   setSearchValue(event.target.value);
+  // }
+  // const handleGenreChange = (event) => {
+  //   console.log(genres);
+  //   setGenres(genres);
+  //   setNewRelease({ ...newRelease, genres: selectedGenres });
+  //   console.log(selectedGenres);
+  // };
 
   function handleChange(event) {
     setNewRelease({ ...newRelease, [event.target.name]: event.target.value });
@@ -23,7 +68,7 @@ const AddRelease = () => {
     const getData = async () => {
       try {
         await createRelease(newRelease);
-        navigate('/release');
+        navigate('/releases');
       } catch (err) {
         console.error(err);
       }
@@ -41,6 +86,9 @@ const AddRelease = () => {
           >
             <div className="field">
               <label className="label">Artist</label>
+              {/* <div className="control">
+                <AsyncCreatableSelect loadOptions={filterArtists} />
+              </div> */}
               <div className="control">
                 <input
                   className="input"
@@ -66,12 +114,15 @@ const AddRelease = () => {
             <div className="field">
               <label className="label">Genres</label>
               <div className="control">
-                <input
-                  className="input"
+                <Select
+                  isMulti
+                  isSearchable
+                  options={genreOptions}
+                  className="basic-multi-select"
+                  classNamePrefix="select"
                   placeholder="Genres"
                   name="genres"
-                  onChange={handleChange}
-                  value={newRelease.genres}
+                  onChange={setGenres}
                 />
               </div>
             </div>
