@@ -32,35 +32,19 @@ const AddRelease = () => {
   const [newRelease, setNewRelease] = React.useState({
     title: '',
     artwork: '',
-    genres: selectedGenres.map((x) => x.value),
+    genres: [],
     releaseYear: '',
     url: '',
     artist: ''
   });
 
-  useEffect(() => {
-    setNewRelease();
-  }, []);
-
-  // const [artistSearch, setSearchValue] = React.useState('');
-
-  // const filterArtists = (artistSearch) => {
-  //   return getAllArtists.filter((i) => {
-  //     i.label.toLowerCase().includes(artistSearch.toLowerCase);
-  //   });
-  // };
-  // function handleArtistChange(event) {
-  //   setSearchValue(event.target.value);
-  // }
-  // const handleGenreChange = (event) => {
-  //   console.log(genres);
-  //   setGenres(genres);
-  //   setNewRelease({ ...newRelease, genres: selectedGenres });
-  //   console.log(selectedGenres);
-  // };
-
   function handleChange(event) {
-    setNewRelease({ ...newRelease, [event.target.name]: event.target.value });
+    setNewRelease({
+      ...newRelease,
+      [event.target.name]: event.target.value,
+      genres: selectedGenres.map((x) => x.value)
+    });
+    console.log(selectedGenres);
   }
 
   function handleSubmit(event) {
@@ -68,6 +52,7 @@ const AddRelease = () => {
     const getData = async () => {
       try {
         await createRelease(newRelease);
+        console.log(newRelease);
         navigate('/releases');
       } catch (err) {
         console.error(err);
@@ -86,9 +71,6 @@ const AddRelease = () => {
           >
             <div className="field">
               <label className="label">Artist</label>
-              {/* <div className="control">
-                <AsyncCreatableSelect loadOptions={filterArtists} />
-              </div> */}
               <div className="control">
                 <input
                   className="input"
