@@ -23,9 +23,7 @@ const Home = () => {
   return (
     <>
       <section className="hero is-fullheight-with-navbar has-background-dark">
-        <h1 className="title has-text-centered has-text-white mt-4">
-          Welcome to the Music Rating App!
-        </h1>
+        <h1 className="title has-text-centered has-text-white mt-4">Rateify</h1>
 
         <div className="container">
           <h2 className="has-text-centered has-text-white my-4">

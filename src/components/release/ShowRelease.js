@@ -1,15 +1,28 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { getReleaseById } from '../../api/release';
+import {
+  getReleaseById,
+  createComment,
+  deleteComment
+} from '../../api/release';
+import { getLoggedInUserId } from '../../lib/auth';
 import { Link } from 'react-router-dom';
+import Select from 'react-select';
 import Spotify from 'react-spotify-embed';
 
 const ReleaseShow = () => {
   const { id } = useParams();
   console.log(useParams());
-  console.log('Release ID', id);
   const [release, setRelease] = React.useState(null);
-
+  const [ratingValue, setRating] = React.useState(null);
+  const [textValue, setTextValue] = React.useState('');
+  const reviewOptions = [
+    { value: 1, label: '⭐️' },
+    { value: 2, label: '⭐️ ⭐️' },
+    { value: 3, label: '⭐️ ⭐️ ⭐️' },
+    { value: 4, label: '⭐️ ⭐️ ⭐️ ⭐️' },
+    { value: 5, label: '⭐️ ⭐️ ⭐️ ⭐️ ⭐️' }
+  ];
   React.useEffect(() => {
     const getData = async () => {
       try {
@@ -23,6 +36,24 @@ const ReleaseShow = () => {
     getData();
   }, [id]);
 
+  const handleTextChange = (e) => {
+    setTextValue(e.target.value);
+  };
+  const handleCommentDelete = async (commentId) => {
+    const data = await deleteComment(id, commentId);
+    setRelease(data);
+  };
+  const handleReviewSubmit = async (e) => {
+    e.preventDefault();
+    const data = await createComment(id, {
+      text: textValue,
+      rating: ratingValue.value
+    });
+    console.log(data);
+    setTextValue('');
+    setRating('');
+    setRelease(data);
+  };
   return (
     <section className="section has-background-dark show-page">
       <div className="container">
@@ -46,7 +77,7 @@ const ReleaseShow = () => {
                   </Link>
                 </h3>
                 <h2 className="title has-text-centered has-text-white is-size-5">
-                  {release.genres}
+                  {release.genres.join(', ')}
                 </h2>
                 <h2 className="title has-text-centered has-text-white is-size-5">
                   {release.releaseYear}
@@ -55,11 +86,51 @@ const ReleaseShow = () => {
                   <Spotify link={release.url} />
                 </div>
                 <div className="reviews">
+                  {getLoggedInUserId() && (
+                    <form onSubmit={handleReviewSubmit}>
+                      <div className="form">
+                        <label htmlFor="review" className="label">
+                          Post a new review
+                        </label>
+                        <div className="control">
+                          <textarea
+                            type="text"
+                            className="input"
+                            name="text"
+                            value={textValue}
+                            onChange={handleTextChange}
+                          ></textarea>
+                          <Select
+                            options={reviewOptions}
+                            className="basic-multi-select"
+                            classNamePrefix="select"
+                            name="rating"
+                            onChange={setRating}
+                            placeholder="Rating"
+                          ></Select>
+                        </div>
+                      </div>
+                      <input
+                        type="submit"
+                        className="button is-success"
+                        value="Submit"
+                      />
+                    </form>
+                  )}
                   {release.reviews.map((review) => {
                     return (
                       <div key={review._id}>
                         <p>{review.text}</p>
                         <p>{review.rating}</p>
+                        {getLoggedInUserId() === review.createdBy && (
+                          <button
+                            type="button"
+                            className="button is-danger"
+                            onClick={() => handleCommentDelete(review._id)}
+                          >
+                            Delete ☠️
+                          </button>
+                        )}
                       </div>
                     );
                   })}

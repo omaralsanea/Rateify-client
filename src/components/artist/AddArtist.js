@@ -33,11 +33,13 @@ const AddArtist = () => {
       <div className="container">
         <div className="columns">
           <form
-            className="column is-half is-offset-one-quarter box"
+            className="column is-half is-offset-one-quarter box has-background-grey"
             onSubmit={handleSubmit}
           >
             <div className="field">
-              <label className="label">Artist Name</label>
+              <label className="label has-text-white has-text-centered">
+                Artist Name
+              </label>
               <div className="control">
                 <input
                   className="input"
@@ -49,7 +51,9 @@ const AddArtist = () => {
               </div>
             </div>
             <div className="field">
-              <label className="label">Artist Biography</label>
+              <label className="label has-text-white has-text-centered">
+                Artist Biography
+              </label>
               <div className="control">
                 <textarea
                   className="input"
@@ -64,7 +68,9 @@ const AddArtist = () => {
               </div>
             </div>
             <div className="field">
-              <label className="label">Artist Image URL</label>
+              <label className="label has-text-white has-text-centered">
+                Artist Image URL
+              </label>
               <div className="control">
                 <input
                   className="input"
@@ -76,7 +82,7 @@ const AddArtist = () => {
               </div>
             </div>
             <div className="field">
-              <button type="submit" className="button is-fullwidth is-warning">
+              <button type="submit" className="button is-fullwidth is-success">
                 Submit Artist
               </button>
             </div>

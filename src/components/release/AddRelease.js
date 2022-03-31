@@ -37,14 +37,34 @@ const AddRelease = () => {
     url: '',
     artist: ''
   });
+  const [artistsList, setList] = React.useState([]);
+
+  React.useEffect(() => {
+    const getData = async () => {
+      try {
+        const data = await getAllArtists();
+        const transformedData = data.map(({ _id, name }) => ({
+          value: _id,
+          label: name
+        }));
+        setList(transformedData);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    getData();
+  }, []);
+  console.log(artistsList);
+  const [artist, setArtist] = React.useState('');
 
   function handleChange(event) {
     setNewRelease({
       ...newRelease,
       [event.target.name]: event.target.value,
-      genres: selectedGenres.map((x) => x.value)
+      genres: selectedGenres.map((x) => x.value),
+      artist: artist.value
     });
-    console.log(selectedGenres);
+    console.log(newRelease.artist);
   }
 
   function handleSubmit(event) {
@@ -62,27 +82,33 @@ const AddRelease = () => {
   }
 
   return (
-    <section className="section">
+    <section className="is-fullheight-with-navbar has-background-dark">
       <div className="container">
         <div className="columns">
           <form
-            className="column is-half is-offset-one-quarter box"
+            className="column is-half is-offset-one-quarter box has-background-grey"
             onSubmit={handleSubmit}
           >
             <div className="field">
-              <label className="label">Artist</label>
+              <label className="label has-text-white has-text-centered">
+                Artist
+              </label>
               <div className="control">
-                <input
-                  className="input"
+                <Select
+                  isSearchable
+                  options={artistsList}
+                  className="basic-multi-select"
+                  classNamePrefix="select"
                   placeholder="Artist"
-                  name="artist"
-                  onChange={handleChange}
-                  value={newRelease.artist}
+                  name="genres"
+                  onChange={setArtist}
                 />
               </div>
             </div>
             <div className="field">
-              <label className="label">Release Title</label>
+              <label className="label has-text-white has-text-centered">
+                Release Title
+              </label>
               <div className="control">
                 <input
                   className="input"
@@ -94,7 +120,9 @@ const AddRelease = () => {
               </div>
             </div>
             <div className="field">
-              <label className="label">Genres</label>
+              <label className="label has-text-white has-text-centered">
+                Genres
+              </label>
               <div className="control">
                 <Select
                   isMulti
@@ -109,7 +137,9 @@ const AddRelease = () => {
               </div>
             </div>
             <div className="field">
-              <label className="label">Release Year</label>
+              <label className="label has-text-white has-text-centered">
+                Release Year
+              </label>
               <div className="control">
                 <input
                   className="input"
@@ -121,7 +151,9 @@ const AddRelease = () => {
               </div>
             </div>
             <div className="field">
-              <label className="label">Release Image URL</label>
+              <label className="label has-text-white has-text-centered">
+                Release Image URL
+              </label>
               <div className="control">
                 <input
                   className="input"
@@ -133,7 +165,9 @@ const AddRelease = () => {
               </div>
             </div>
             <div className="field">
-              <label className="label">Spotify Link</label>
+              <label className="label has-text-white has-text-centered">
+                Spotify Link
+              </label>
               <div className="control">
                 <input
                   className="input"
@@ -145,7 +179,7 @@ const AddRelease = () => {
               </div>
             </div>
             <div className="field">
-              <button type="submit" className="button is-fullwidth is-warning">
+              <button type="submit" className="button is-fullwidth is-success">
                 Submit Release
               </button>
             </div>

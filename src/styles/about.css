@@ -22,7 +22,7 @@
 
 .profiles a {
   text-decoration: none;
-  color: rgb(35, 88, 145);
+  color: white;
   font-style: italic;
   margin: 5px;
 }
@@ -43,7 +43,7 @@
   font-size: 2rem;
   font-weight: bold;
   font-family: 'DM Sans', sans-serif;
-  color: #011570;
+  color: white;
 }
 .about h2 {
   font-family: 'Londrina Shadow', cursive;

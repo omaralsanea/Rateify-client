@@ -3,6 +3,11 @@ import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 
 function CarouselLatest({ releases }) {
+  const sortedReleases = [...releases];
+  console.log(typeof sortedReleases[0].createdAt);
+  sortedReleases.sort((a, b) =>
+    new Date(a.createdAt) < new Date(b.createdAt) ? 1 : -1
+  );
   const settings = {
     centerMode: true,
     focusOnSelect: true,
@@ -12,6 +17,8 @@ function CarouselLatest({ releases }) {
     draggable: true,
     arrows: true,
     autoplay: true,
+    pauseOnHover: true,
+    infinite: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -52,7 +59,7 @@ function CarouselLatest({ releases }) {
 
   return (
     <Slider {...settings}>
-      {releases.map((release) => (
+      {sortedReleases.map((release) => (
         <div
           key={release._id}
           className="slider-element has-text-centered is-inline-block"
