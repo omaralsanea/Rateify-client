@@ -8,7 +8,6 @@ function CarouselGreatest({ releases }) {
     parseFloat(a.averageRating) < parseFloat(b.averageRating) ? 1 : -1
   );
   const settings = {
-    centerMode: true,
     focusOnSelect: true,
     centerPadding: '0%',
     slidesToShow: 5,

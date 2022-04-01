@@ -92,7 +92,7 @@ const ReleaseShow = () => {
                         <label htmlFor="review" className="label">
                           Post a new review
                         </label>
-                        <div className="control">
+                        <div className="control" id="reviews">
                           <textarea
                             type="text"
                             className="input"
@@ -120,15 +120,15 @@ const ReleaseShow = () => {
                   {release.reviews.map((review) => {
                     return (
                       <div key={review._id}>
-                        <p>{review.text}</p>
-                        <p>{review.rating}</p>
+                        <p className="has-text-white">{review.text}</p>
+                        <p className="has-text-white">{review.rating}</p>
                         {getLoggedInUserId() === review.createdBy && (
                           <button
                             type="button"
                             className="button is-danger"
                             onClick={() => handleCommentDelete(review._id)}
                           >
-                            Delete ☠️
+                            Delete
                           </button>
                         )}
                       </div>

@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar px-6 title is-5 has-background-black mb-0">
+    <nav className="navbar px-6 title is-5 has-background-black mb-0 is-fixed-top">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item has-text-white">
           Home
@@ -59,9 +59,11 @@ const Navbar = () => {
           <Link to="/about" className="navbar-item has-text-white">
             About
           </Link>
-          <Link to="/login" className="navbar-item has-text-white">
-            Login
-          </Link>
+          {!getLoggedInUserId() && (
+            <Link to="/login" className="navbar-item has-text-white">
+              Login
+            </Link>
+          )}
           {/* // ! If logged in, can show the option to log out. */}
           {getLoggedInUserId() && (
             <Link

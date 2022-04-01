@@ -20,7 +20,7 @@ const ShowArtist = () => {
   }, [id]);
 
   return (
-    <section className="section has-background-dark">
+    <section className="section hero is-fullheight-with-navbar has-background-dark">
       <div className="container">
         {!artist ? (
           <p>Loading...</p>

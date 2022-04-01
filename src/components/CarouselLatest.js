@@ -9,7 +9,6 @@ function CarouselLatest({ releases }) {
     new Date(a.createdAt) < new Date(b.createdAt) ? 1 : -1
   );
   const settings = {
-    centerMode: true,
     focusOnSelect: true,
     centerPadding: '0%',
     slidesToShow: 5,

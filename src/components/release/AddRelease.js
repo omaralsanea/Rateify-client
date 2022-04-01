@@ -82,9 +82,9 @@ const AddRelease = () => {
   }
 
   return (
-    <section className="is-fullheight-with-navbar has-background-dark">
-      <div className="container">
-        <div className="columns">
+    <section className="is-fullheight-with-navbar has-background-dark form-page">
+      <div className="container pt-6">
+        <div className="columns pt-6">
           <form
             className="column is-half is-offset-one-quarter box has-background-grey"
             onSubmit={handleSubmit}
@@ -97,9 +97,9 @@ const AddRelease = () => {
                 <Select
                   isSearchable
                   options={artistsList}
-                  className="basic-multi-select"
+                  className="basic-multi-select has-background-grey-lighter"
                   classNamePrefix="select"
-                  placeholder="Artist"
+                  placeholder=""
                   name="genres"
                   onChange={setArtist}
                 />
@@ -111,8 +111,8 @@ const AddRelease = () => {
               </label>
               <div className="control">
                 <input
-                  className="input"
-                  placeholder="Release Title"
+                  className="input has-background-grey-lighter"
+                  //placeholder="Release Title"
                   name="title"
                   onChange={handleChange}
                   value={newRelease.title}
@@ -128,9 +128,9 @@ const AddRelease = () => {
                   isMulti
                   isSearchable
                   options={genreOptions}
-                  className="basic-multi-select"
+                  className="basic-multi-select has-background-grey-lighter"
                   classNamePrefix="select"
-                  placeholder="Genres"
+                  placeholder=""
                   name="genres"
                   onChange={setGenres}
                 />
@@ -142,8 +142,8 @@ const AddRelease = () => {
               </label>
               <div className="control">
                 <input
-                  className="input"
-                  placeholder="Release Year"
+                  className="input has-background-grey-lighter"
+                  // placeholder="Release Year"
                   name="releaseYear"
                   onChange={handleChange}
                   value={newRelease.releaseYear}
@@ -156,8 +156,8 @@ const AddRelease = () => {
               </label>
               <div className="control">
                 <input
-                  className="input"
-                  placeholder="Release Image URL"
+                  className="input has-background-grey-lighter"
+                  // placeholder="Release Image URL"
                   name="artwork"
                   onChange={handleChange}
                   value={newRelease.artwork}
@@ -170,8 +170,8 @@ const AddRelease = () => {
               </label>
               <div className="control">
                 <input
-                  className="input"
-                  placeholder="Spotify Link"
+                  className="input has-background-grey-lighter"
+                  // placeholder="Spotify Link"
                   name="url"
                   onChange={handleChange}
                   value={newRelease.url}

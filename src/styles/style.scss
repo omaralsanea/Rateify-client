@@ -1,6 +1,18 @@
 @import '~bulma/bulma.sass';
 @import url(./partials/_slick-theme.css);
 @import url(./partials/_slick.css);
+@font-face {
+  font-family: 'Stellar-light';
+  src: url(./assets/stellar/Stellar-light.otf);
+}
+@font-face {
+  font-family: 'Stellar-medium';
+  src: url(./assets/stellar/Stellar-Medium.otf);
+}
+@font-face {
+  font-family: 'Stellar-bold';
+  src: url(./assets/stellar/Stellar-Bold.otf);
+}
 
 .slider-element {
   display: flex;
@@ -30,4 +42,33 @@ button.slick-arrow {
 .form-page,
 .show-page {
   height: 100vh;
+}
+
+.navbar-end .navbar-item:hover {
+  background-color: black;
+}
+
+.rateify {
+  font-family: 'Stellar-light';
+  font-size: 4.75rem;
+}
+
+h2 {
+  font-family: 'Stellar-medium';
+}
+
+nav {
+  font-family: 'Stellar-medium';
+}
+
+.artist-img .about-pic {
+  height: 300px;
+}
+
+.mt-6.rateify {
+  font-size: 4rem;
+}
+
+#reviews {
+  max-width: 400px;
 }

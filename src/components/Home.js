@@ -23,10 +23,12 @@ const Home = () => {
   return (
     <>
       <section className="hero is-fullheight-with-navbar has-background-dark">
-        <h1 className="title has-text-centered has-text-white mt-4">Rateify</h1>
+        <h1 className="rateify title has-text-centered has-text-white mt-6">
+          Rateify
+        </h1>
 
         <div className="container">
-          <h2 className="has-text-centered has-text-white my-4">
+          <h2 className="has-text-centered has-text-white mt-4 mb-5 is-size-4">
             {' '}
             Recently Added Releases{' '}
           </h2>
@@ -34,7 +36,7 @@ const Home = () => {
         </div>
 
         <div className="container">
-          <h2 className="has-text-centered has-text-white my-4">
+          <h2 className="has-text-centered has-text-white mt-4 mb-5 is-size-4">
             {' '}
             Highest Rated Releases{' '}
           </h2>

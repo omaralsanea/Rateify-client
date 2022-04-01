@@ -29,9 +29,9 @@ const AddArtist = () => {
   }
 
   return (
-    <section className="section">
-      <div className="container">
-        <div className="columns">
+    <section className="is-fullheight-with-navbar has-background-dark form-page">
+      <div className="container pt-6">
+        <div className="columns pt-6">
           <form
             className="column is-half is-offset-one-quarter box has-background-grey"
             onSubmit={handleSubmit}
@@ -42,8 +42,8 @@ const AddArtist = () => {
               </label>
               <div className="control">
                 <input
-                  className="input"
-                  placeholder="Artist Name"
+                  className="input has-background-grey-lighter"
+                  // placeholder="Artist Name"
                   name="name"
                   onChange={handleChange}
                   value={newArtist.name}
@@ -56,8 +56,8 @@ const AddArtist = () => {
               </label>
               <div className="control">
                 <textarea
-                  className="input"
-                  placeholder="Artist Biography"
+                  className="input has-background-grey-lighter"
+                  // placeholder="Artist Biography"
                   name="bio"
                   rows={5}
                   cols={5}
@@ -73,8 +73,8 @@ const AddArtist = () => {
               </label>
               <div className="control">
                 <input
-                  className="input"
-                  placeholder="Artist Image URL"
+                  className="input has-background-grey-lighter"
+                  // placeholder="Artist Image URL"
                   name="img"
                   onChange={handleChange}
                   value={newArtist.img}
