@@ -37,17 +37,20 @@ const ShowArtist = () => {
               </div>
               <div className="column is-half has-text-white">
                 <h3>Biography</h3>
-                <p>{artist.bio}</p>
+
+                <p className="my-2">{artist.bio}</p>
                 <h2>Releases</h2>
-                {artist.releases.map((release) => {
-                  return (
-                    <div key={release._id} className="image is-128x128">
-                      <Link to={`/releases/${release._id}`}>
-                        <img src={release.artwork} />
-                      </Link>
-                    </div>
-                  );
-                })}
+                <div className="container is-flex">
+                  {artist.releases.map((release) => {
+                    return (
+                      <div key={release._id} className="image is-128x128 m-2">
+                        <Link to={`/releases/${release._id}`}>
+                          <img src={release.artwork} />
+                        </Link>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>

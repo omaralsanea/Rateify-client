@@ -23,6 +23,21 @@ const ReleaseShow = () => {
     { value: 4, label: '⭐️ ⭐️ ⭐️ ⭐️' },
     { value: 5, label: '⭐️ ⭐️ ⭐️ ⭐️ ⭐️' }
   ];
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      background: '#dbdbdb'
+    }),
+    dropdownIndicator: (provided) => ({
+      ...provided,
+      svg: { fill: '#7a7a7a' }
+    }),
+    container: (provided) => ({
+      ...provided,
+      width: '185px'
+    })
+  };
+
   React.useEffect(() => {
     const getData = async () => {
       try {
@@ -55,7 +70,7 @@ const ReleaseShow = () => {
     setRelease(data);
   };
   return (
-    <section className="section has-background-dark show-page">
+    <section className="section has-background-dark is-fullheight-with-navbar show-page">
       <div className="container">
         {!release ? (
           <p>Loading...</p>
@@ -71,8 +86,11 @@ const ReleaseShow = () => {
                 <h4 className="title has-text-centered has-text-white">
                   {release.title}
                 </h4>
-                <h3 className="title has-text-centered has-text-white is-size-4">
-                  <Link to={`/artists/${release.artist._id}`}>
+                <h3 className="title has-text-centered  is-size-4">
+                  <Link
+                    to={`/artists/${release.artist._id}`}
+                    className="has-text-success"
+                  >
                     {release.artist.name}
                   </Link>
                 </h3>
@@ -88,33 +106,37 @@ const ReleaseShow = () => {
                 <div className="reviews">
                   {getLoggedInUserId() && (
                     <form onSubmit={handleReviewSubmit}>
-                      <div className="form">
-                        <label htmlFor="review" className="label">
+                      <div className="form mt-4">
+                        <label
+                          htmlFor="review"
+                          className="label has-text-white"
+                        >
                           Post a new review
                         </label>
                         <div className="control" id="reviews">
-                          <textarea
-                            type="text"
-                            className="input"
-                            name="text"
-                            value={textValue}
-                            onChange={handleTextChange}
-                          ></textarea>
                           <Select
                             options={reviewOptions}
-                            className="basic-multi-select"
+                            className="basic-multi-select label"
                             classNamePrefix="select"
                             name="rating"
                             onChange={setRating}
                             placeholder="Rating"
+                            styles={customStyles}
                           ></Select>
+                          <textarea
+                            type="text"
+                            className="input has-background-grey-lighter mt-2"
+                            name="text"
+                            value={textValue}
+                            onChange={handleTextChange}
+                          ></textarea>
+                          <input
+                            type="submit"
+                            className="button is-success label mt-4 mb-5"
+                            value="Submit"
+                          />
                         </div>
                       </div>
-                      <input
-                        type="submit"
-                        className="button is-success"
-                        value="Submit"
-                      />
                     </form>
                   )}
                   {release.reviews.map((review) => {
@@ -125,7 +147,7 @@ const ReleaseShow = () => {
                         {getLoggedInUserId() === review.createdBy && (
                           <button
                             type="button"
-                            className="button is-danger"
+                            className="button is-danger label"
                             onClick={() => handleCommentDelete(review._id)}
                           >
                             Delete

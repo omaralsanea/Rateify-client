@@ -82,7 +82,10 @@ const AddArtist = () => {
               </div>
             </div>
             <div className="field">
-              <button type="submit" className="button is-fullwidth is-success">
+              <button
+                type="submit"
+                className="button label is-fullwidth is-success"
+              >
                 Submit Artist
               </button>
             </div>

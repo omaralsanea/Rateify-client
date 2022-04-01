@@ -53,10 +53,11 @@ button.slick-arrow {
   font-size: 4.75rem;
 }
 
-h2 {
-  font-family: 'Stellar-medium';
-}
-
+h2,
+h4,
+h3,
+p,
+label,
 nav {
   font-family: 'Stellar-medium';
 }
@@ -70,5 +71,11 @@ nav {
 }
 
 #reviews {
-  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+html {
+  background-color: hsl(0, 0%, 21%);
 }

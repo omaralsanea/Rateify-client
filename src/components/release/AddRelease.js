@@ -2,30 +2,42 @@ import React, { Component, useEffect } from 'react';
 import { createRelease } from '../../api/release';
 import { useNavigate } from 'react-router-dom';
 import Select from 'react-select';
-import { getAllArtists } from '../../api/artist';
+import { Link } from 'react-router-dom';
+// import CreatableSelect from 'react-select/creatable';
+import { getAllArtists, createArtist } from '../../api/artist';
 
 const AddRelease = () => {
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      background: '#dbdbdb'
+    }),
+    dropdownIndicator: (provided) => ({
+      ...provided,
+      svg: { fill: '#7a7a7a' }
+    })
+  };
   const genreOptions = [
-    { value: 'rock', label: 'Rock' },
-    { value: 'pop', label: 'Pop' },
-    { value: 'jazz', label: 'Jazz' },
-    { value: 'classical', label: 'Classical' },
-    { value: 'metal', label: 'Metal' },
-    { value: 'country', label: 'Country' },
-    { value: 'folk', label: 'Folk' },
-    { value: 'blues', label: 'Blues' },
-    { value: 'r&b', label: 'R&B' },
-    { value: 'jungle', label: 'Jungle' },
-    { value: 'reggae', label: 'Reggae' },
-    { value: 'afrobeat', label: 'Afrobeat' },
-    { value: 'electronic', label: 'Electronic' },
-    { value: 'hip-hop', label: 'Hip Hop' },
-    { value: 'hard-rock', label: 'Hard Rock' },
-    { value: 'latin', label: 'Latin' },
-    { value: 'world', label: 'World' },
-    { value: 'spoken-word', label: 'Spoken Word' },
-    { value: 'progressive-rock', label: 'Progressive Rock' },
-    { value: 'house-techno', label: 'House/Techno' }
+    { value: 'Rock', label: 'Rock' },
+    { value: 'Pop', label: 'Pop' },
+    { value: 'Jazz', label: 'Jazz' },
+    { value: 'Classical', label: 'Classical' },
+    { value: 'Metal', label: 'Metal' },
+    { value: 'Country', label: 'Country' },
+    { value: 'Folk', label: 'Folk' },
+    { value: 'Blues', label: 'Blues' },
+    { value: 'R&B', label: 'R&B' },
+    { value: 'Jungle', label: 'Jungle' },
+    { value: 'Reggae', label: 'Reggae' },
+    { value: 'Afrobeat', label: 'Afrobeat' },
+    { value: 'Electronic', label: 'Electronic' },
+    { value: 'Hip Hop', label: 'Hip Hop' },
+    { value: 'Hard Rock', label: 'Hard Rock' },
+    { value: 'Latin', label: 'Latin' },
+    { value: 'World', label: 'World' },
+    { value: 'Spoken Word', label: 'Spoken Word' },
+    { value: 'Progressive Rock', label: 'Progressive Rock' },
+    { value: 'House Techno', label: 'House/Techno' }
   ];
   const [selectedGenres, setGenres] = React.useState([]);
   const navigate = useNavigate();
@@ -67,6 +79,18 @@ const AddRelease = () => {
     console.log(newRelease.artist);
   }
 
+  // function handleCreate(event) {
+  //   console.log('ARTIST IS', event.target.value);
+  //   const getData = async () => {
+  //     try {
+  //       await createArtist({ artist: event.target.value });
+  //     } catch (err) {
+  //       console.error(err);
+  //     }
+  //   };
+  //   getData();
+  // }
+
   function handleSubmit(event) {
     event.preventDefault();
     const getData = async () => {
@@ -91,16 +115,31 @@ const AddRelease = () => {
           >
             <div className="field">
               <label className="label has-text-white has-text-centered">
-                Artist
+                Artist (If artist is not in list, click{' '}
+                <Link to="/addartist" className="has-text-success">
+                  here
+                </Link>{' '}
+                to add)
               </label>
               <div className="control">
+                {/* <CreatableSelect
+                  isClearable
+                  onChange={setArtist}
+                  options={artistsList}
+                  placeholder=""
+                  name="artists"
+                  className="basic-multi-select"
+                  onCreateOption={handleCreate}
+                /> */}
                 <Select
+                  styles={customStyles}
+                  isClearable
                   isSearchable
                   options={artistsList}
                   className="basic-multi-select has-background-grey-lighter"
                   classNamePrefix="select"
                   placeholder=""
-                  name="genres"
+                  name="artists"
                   onChange={setArtist}
                 />
               </div>
@@ -120,11 +159,12 @@ const AddRelease = () => {
               </div>
             </div>
             <div className="field">
-              <label className="label has-text-white has-text-centered">
+              <label className="label has-text-white has-text-centered ">
                 Genres
               </label>
               <div className="control">
                 <Select
+                  styles={customStyles}
                   isMulti
                   isSearchable
                   options={genreOptions}
@@ -179,7 +219,10 @@ const AddRelease = () => {
               </div>
             </div>
             <div className="field">
-              <button type="submit" className="button is-fullwidth is-success">
+              <button
+                type="submit"
+                className="button label is-fullwidth is-success"
+              >
                 Submit Release
               </button>
             </div>
