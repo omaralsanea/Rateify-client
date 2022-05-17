@@ -14,6 +14,8 @@
 ## Concept
    Our first discussions centred around the fact that we wanted to build something that would be useful to people and that was different to other applications that we had built before. We focused on music as it was an area that we were all interested in and decided to create a site that blended musical content with user interaction for music fans looking to share their favorite releases and opinions about the music and artists who created it.
 
+You can check it out for yourself [here!](https://rateify.netlify.app/) 
+
 ## Application Walkthrough
 ### Home  Page
 <p align="center">
