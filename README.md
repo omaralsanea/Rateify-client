@@ -2,6 +2,8 @@
 
 ## Project Overview
    _Rateify_ is a full stack MERN application (MongoDB, Express, React and Node) .The site allows users to discover and rate music, post their own reviews about a release, and upload a release for others to comment on. The app also allows users to listen to samples of the posted music by listening to the release's associated Spotify playlist .  _Rateify_ was a week-long group project in which I worked with [Calum MacEachen](https://github.com/calum-m708) and [JT Black](https://github.com/JT-Black) to create our finished site.
+   
+<img width="1439" alt="Screenshot 2022-05-17 at 13 48 20" src="https://user-images.githubusercontent.com/98101603/168835148-cae98c17-b2d1-4258-bfed-989dc85d0d84.png">
 
 ## The Brief
 - Build a full-stack application by making a back-end and a front-end.
