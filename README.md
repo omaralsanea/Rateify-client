@@ -16,6 +16,11 @@
 
 You can check it out for yourself [here!](https://rateify.netlify.app/) 
 
+## Planning
+
+<img width="1300" alt="Screenshot 2022-05-18 at 10 47 03" src="https://user-images.githubusercontent.com/98101603/169011418-719c4d07-d92d-4970-984a-b7cea84494ed.png">
+
+
 ## Application Walkthrough
 ### Home  Page
 
