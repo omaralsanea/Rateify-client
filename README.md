@@ -66,7 +66,7 @@ Our first discussions centred around the fact that we wanted to build something 
 
 ### Artist Index
 <p align="center">
-	<img src="./src/img/artists.png" width="96%"  />
+<img src="./src/img/artists.png" width="76%"  />
 </p>
 
 ### Release Index
