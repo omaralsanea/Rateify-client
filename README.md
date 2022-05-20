@@ -53,6 +53,12 @@ Our first discussions centred around the fact that we wanted to build something 
 ## 3) Front-End 
 
 
+<img width="522" alt="Screenshot 2022-05-20 at 12 34 20" src="https://user-images.githubusercontent.com/98101603/169520631-0399ad3c-7e10-47ef-8925-38ac4fe0024c.png">
+
+
+<img width="369" alt="Screenshot 2022-05-20 at 12 36 13" src="https://user-images.githubusercontent.com/98101603/169520653-b415da82-6d23-4796-b3f6-babc23725f3a.png">
+
+
 ![ezgif-1-a84f7849b8](https://user-images.githubusercontent.com/98101603/169519343-434bbf75-6abd-4f15-aaf7-6b8914d778ea.gif)
 
 
