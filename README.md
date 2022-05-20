@@ -53,6 +53,9 @@ Our first discussions centred around the fact that we wanted to build something 
 ## 3) Front-End 
 
 
+![ezgif-1-a84f7849b8](https://user-images.githubusercontent.com/98101603/169519343-434bbf75-6abd-4f15-aaf7-6b8914d778ea.gif)
+
+
 
 ## 4) Styling
 
