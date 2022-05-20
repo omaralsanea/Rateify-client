@@ -84,19 +84,19 @@ Our first discussions centred around the fact that we wanted to build something 
 
 
 ### Register
-<p align="center">
-	<img src="./src/img/register.png" width="96%"  />
-</p>
+
+<img width="700" alt="Screenshot 2022-05-20 at 12 25 14" src="https://user-images.githubusercontent.com/98101603/169518183-4f129bc0-d2fd-4b1b-be8e-7aa0ec9c4bc8.png">
+
 
 ### Login
-<p align="center">
-	<img src="./src/img/login.png" width="96%"  />
-</p>
+
+<img width="700" alt="Screenshot 2022-05-20 at 12 25 25" src="https://user-images.githubusercontent.com/98101603/169518202-4345977a-557e-441e-9c5e-54592d0c24b8.png">
+
 
 ### About
-<p align="center">
-	<img src="./src/img/about.png" width="96%"  />
-</p>
+
+<img width="700" alt="Screenshot 2022-05-20 at 12 25 34" src="https://user-images.githubusercontent.com/98101603/169518226-b5093ec8-fed4-426f-a656-89632bfc3b42.png">
+
 
 ## Architecture:
 ### Front End: 
