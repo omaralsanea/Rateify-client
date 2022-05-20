@@ -41,14 +41,14 @@ You can check it out for yourself [here!](https://rateify.netlify.app/)
 
 ## 1) Planning
 
-In the planning stage we discussed many diferent ideas but in the end we all decided on a music based app as well all had a passion for it. 
+In the planning stage we discussed many diferent ideas but in the end we all decided on a music based app as we all had a shared passion for music. 
 We wanted to build something that would be both fun and useful to people and wanted there to be an emphasis on user interaction for music fans looking to share their favorite releases and opinions about the music and artists who created it.
 
 <img width="1300" alt="Screenshot 2022-05-18 at 10 47 03" src="https://user-images.githubusercontent.com/98101603/169011418-719c4d07-d92d-4970-984a-b7cea84494ed.png">
 
 ## 2) Back-End 
 
-The below code snippet shows the router structure and the Admin privileges withinn (creating, updating and deleting can only be completed by an Admin): 
+The below code snippet shows the router structure and the Admin privileges within (creating, updating and deleting can only be completed by an Admin): 
 
 <img width="484" alt="Screenshot 2022-05-20 at 12 57 42" src="https://user-images.githubusercontent.com/98101603/169523791-e7854295-35a7-4c19-b380-eaebac0c4228.png">
 
@@ -135,7 +135,7 @@ Adding releases requires using a spotify link currently. An unsolved issue we ha
 - First time using a variety of new technologies. 
 - First time working in a group of more than two.
 - Complete application that delivers many features as designed.
-- Complete application that stronngly resembles the wireframes.
+- Complete application that strongly resembles the wireframes.
 
 ### **Blockers**
 - The single biggest blocker was the variety of new technologies we had to use for this project and learning each of their idiosyncrasies. 
@@ -148,6 +148,6 @@ Adding releases requires using a spotify link currently. An unsolved issue we ha
 - Fix the registration bug. 
 
 # Key Takeaways
-Building 'Rateify' was a great way to build my knowledge of new technologies and was also a great experience of working in a group as both Calum and JT were fatastic to work with. 
+Building 'Rateify' was a great way to build my knowledge of new technologies and was also a great experience of working in a group as both Calum and JT were fantastic to work with. 
 
 
