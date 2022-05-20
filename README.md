@@ -47,16 +47,19 @@ Our first discussions centred around the fact that we wanted to build something 
 
 ## 2) Back-End 
 
+The below code snippet shows the routes within the backend and overall structure: 
+
+<img width="484" alt="Screenshot 2022-05-20 at 12 57 42" src="https://user-images.githubusercontent.com/98101603/169523791-e7854295-35a7-4c19-b380-eaebac0c4228.png">
 
 
 
 ## 3) Front-End 
 
-The below code snippet shows the getAllArtists, getArtistById and createArtist functions  which implemented axios requests, async await and authorisation with bearer tokens.  
+The below code snippet shows the getAllArtists, getArtistById and createArtist functions  which implemented axios requests, async await and authorisation with bearer tokens:   
 
 <img width="522" alt="Screenshot 2022-05-20 at 12 34 20" src="https://user-images.githubusercontent.com/98101603/169520631-0399ad3c-7e10-47ef-8925-38ac4fe0024c.png">
 
-The below code snippet shows a component file(ShowArtist.js) which shows the use of useState, useEffect and a try...catch block to produce the 'Show Artist' page. 
+The below code snippet shows a component file(ShowArtist.js) which shows the use of useState, useEffect and a try...catch block to produce the 'Show Artist' page:
 
 <img width="369" alt="Screenshot 2022-05-20 at 12 36 13" src="https://user-images.githubusercontent.com/98101603/169520653-b415da82-6d23-4796-b3f6-babc23725f3a.png">
 
