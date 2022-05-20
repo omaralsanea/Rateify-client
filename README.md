@@ -126,11 +126,11 @@ Adding releases requires using a spotify link currently. An unsolved issue we ha
 - The single biggest blocker was the variety of new technologies we had to use for this project and learning each of their idiosyncrasies. 
 
 # Bugs
--After deployment registration has stopped working.
+- After deployment registration has stopped working.
 
 # Future Improvements
--Adding an average star rating and reviews section. 
--Fix the registration bug. 
+- Adding an average star rating and reviews section. 
+- Fix the registration bug. 
 
 # Key Takeaways
 Building 'Rateify' was a great way to build my knowledge of new technologies and was also a great experience of working in a group as both Calum and JT were fatastic to work with. 
