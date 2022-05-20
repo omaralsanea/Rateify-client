@@ -51,6 +51,10 @@ The below code snippet shows the router structure and the Admin privileges withi
 
 <img width="484" alt="Screenshot 2022-05-20 at 12 57 42" src="https://user-images.githubusercontent.com/98101603/169523791-e7854295-35a7-4c19-b380-eaebac0c4228.png">
 
+The code snippet below shows that data.js file with our functions for creating both artist and releases. Below this you can see the start of the raw data. 
+
+<img width="402" alt="Screenshot 2022-05-20 at 13 07 04" src="https://user-images.githubusercontent.com/98101603/169524998-1f7f7f33-cccc-4247-a1d6-fe0988158a02.png">
+
 
 
 ## 3) Front-End 
