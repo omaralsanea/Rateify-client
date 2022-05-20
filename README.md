@@ -65,9 +65,9 @@ Our first discussions centred around the fact that we wanted to build something 
 
 
 ### Artist Index
-<p align="center">
-<img src="./src/img/artists.png" width="76%"  />
-</p>
+
+<img width="1440" alt="Screenshot 2022-05-20 at 12 23 00" src="https://user-images.githubusercontent.com/98101603/169517854-38236929-4964-454c-bccb-1a29002f434a.png">
+
 
 ### Release Index
 
