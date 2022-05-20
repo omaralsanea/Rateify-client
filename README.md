@@ -61,7 +61,7 @@ Our first discussions centred around the fact that we wanted to build something 
 ## Application Walkthrough
 ### Home  Page
 
-<img width="1439" alt="Screenshot 2022-05-17 at 13 48 20" src="https://user-images.githubusercontent.com/98101603/168835148-cae98c17-b2d1-4258-bfed-989dc85d0d84.png">
+<img width="700" alt="Screenshot 2022-05-17 at 13 48 20" src="https://user-images.githubusercontent.com/98101603/168835148-cae98c17-b2d1-4258-bfed-989dc85d0d84.png">
 
 
 ### Artist Index
@@ -71,16 +71,16 @@ Our first discussions centred around the fact that we wanted to build something 
 
 ### Release Index
 
-<img width="1440" alt="Screenshot 2022-05-17 at 15 28 08" src="https://user-images.githubusercontent.com/98101603/168836427-2b76529a-ad74-4029-a2f9-8bd24fe92f82.png">
+<img width="700" alt="Screenshot 2022-05-17 at 15 28 08" src="https://user-images.githubusercontent.com/98101603/168836427-2b76529a-ad74-4029-a2f9-8bd24fe92f82.png">
 
 
 ### Artist Page
 
-<img width="1440" alt="Screenshot 2022-05-17 at 15 42 41" src="https://user-images.githubusercontent.com/98101603/168839259-51166133-1003-40f9-bb34-eb36a6d942ac.png">
+<img width="700" alt="Screenshot 2022-05-17 at 15 42 41" src="https://user-images.githubusercontent.com/98101603/168839259-51166133-1003-40f9-bb34-eb36a6d942ac.png">
 
 ### Release Page
 
-<img width="1440" alt="Screenshot 2022-05-17 at 15 42 24" src="https://user-images.githubusercontent.com/98101603/168839440-1388cbba-d2a3-40be-8e80-18d58ae087d9.png">
+<img width="700" alt="Screenshot 2022-05-17 at 15 42 24" src="https://user-images.githubusercontent.com/98101603/168839440-1388cbba-d2a3-40be-8e80-18d58ae087d9.png">
 
 
 ### Register
