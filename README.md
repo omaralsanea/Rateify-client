@@ -41,7 +41,7 @@ You can check it out for yourself [here!](https://rateify.netlify.app/)
 
 ## 1) Planning
 
-In the planning stage we discussed many diferent ideas but in the end we all decided on a music based app as we all had a shared passion for music. 
+In the planning stage we discussed many different ideas but in the end we all decided on a music based app as we all had a shared passion for music. 
 We wanted to build something that would be both fun and useful to people and wanted there to be an emphasis on user interaction for music fans looking to share their favorite releases and opinions about the music and artists who created it.
 
 <img width="1300" alt="Screenshot 2022-05-18 at 10 47 03" src="https://user-images.githubusercontent.com/98101603/169011418-719c4d07-d92d-4970-984a-b7cea84494ed.png">
