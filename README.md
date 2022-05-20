@@ -47,7 +47,7 @@ Our first discussions centred around the fact that we wanted to build something 
 
 ## 2) Back-End 
 
-The below code snippet shows the router structure and the Admin privileges withinn (editing, creating and deleting can only be completed by an Admin): 
+The below code snippet shows the router structure and the Admin privileges withinn (creating, updating and deleting can only be completed by an Admin): 
 
 <img width="484" alt="Screenshot 2022-05-20 at 12 57 42" src="https://user-images.githubusercontent.com/98101603/169523791-e7854295-35a7-4c19-b380-eaebac0c4228.png">
 
